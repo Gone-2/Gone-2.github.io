@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Display(显示)</title>
+
+<style>
+    h1.hidden{visibility: hidden;}/*实例中的隐藏标题仍然会占用空间*/
+    h2.none{display: none;}/*隐藏的元素不会占用任何空间*/
+    li{display: inline;}
+</style>
+</head>
+
+<body>
+    <h1>这是一个可见标题</h1>
+    <h1 class="hidden">这是一个隐藏标题</h1>
+    该标题在实例中仍会占用空间<br>
+    <h2>这是一个可见标题</h2>
+    <h2 class="none">这是一个隐藏标题</h2>
+    该标题在示例中不会占用空间<br>
+
+    <p>链接水平显示：</p>
+    <ul>
+        <li><a href="https://www.runoob.com/html/html-tutorial.html" target="banlk">HTML</a></li>
+        <li><a href="https://www.runoob.com/css/css-tutorial.html" target="banlk">CSS</a></li>
+        <li><a href="https://www.runoob.com/js/js-tutorial.html" target="banlk">JavaScript</a></li>
+    </ul>
+</body>
+</html>

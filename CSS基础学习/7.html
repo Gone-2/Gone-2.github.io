@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS链接</title>
+<style>
+    a.one:link {text-decoration: none; background-color: seagreen; color:#ec4d0e;}      /* 未访问链接*/
+    a.one:visited {text-decoration: none; color:#000000;}  /* 已访问链接 */
+    a.one:hover {text-decoration: underline; color:#FF00FF;background-color: aqua;font-size: 50px;}  /* 鼠标移动到链接上 */
+    a.one:active {text-decoration: none; color:#0000FF;background-color: blueviolet;font-family: 'Times New Roman', Times, serif;}  /* 鼠标点击时 */
+
+    a.two:link,a:visited{
+	display:block;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#98bf21;
+	width:120px;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+    }
+    a.two:hover,a:active{
+	background-color:#7A991A;
+    }
+</style><!--text-decoration用于设置有无下划线,font-size用于设置字体大小，font-family用于设置字体类型-->
+</head>
+
+<body>
+    <p><b><a class="one" href="https://www.baidu.com" target="banlk">这是一个链接</a></b></p>
+    <p><a class="two" href="https://www.baidu.com" target="banlk">高级-创建链接框</a></p>
+    <p>注意：a:hover 必须在a:link和a:visited之后，需要严格按顺序才能看到效果<br>
+    注意：a:active必须在a:hover之后</p>
+</body>
+
+</html>

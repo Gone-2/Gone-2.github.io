@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML表格</title>
+</head>
+
+<body>
+    <table border="2">
+        <caption>caption标签为表格标题</caption>
+        <tr>
+            <th>th标签为表头</th>
+            <th>表头</th>
+        </tr>
+        <tr>
+            <td>td标签为单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table><br><br>
+
+    <table>
+        <caption>这是个没有边框的表格</caption>
+        <tr>
+            <td>table标签</td>
+            <td>不用border定义表格边框</td>
+            <td>则默认为0</td>
+        </tr>
+        <tr>
+            <td>border="0"</td>
+            <td>亦是如此</td>
+            <td>两种方法效果一样</td>
+        </tr>
+    </table><br><br>
+
+    <table border="1">
+        <tr>
+            <th>1</th>
+            <th colspan="2">跨列表格示例</th>
+        </tr>
+        <tr>
+            <th rowspan="2">跨行表格示例</th>
+            <th>1</th>
+            <th>2</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table><br><br>
+
+    <table border="2">
+        <caption>在表格内显示不同的元素</caption>
+        <tr>
+            <td>
+            <p>这是一个段落</p>
+            <p>这是另一个段落</p>
+            </td>
+            <td>
+                这个单元格包含另一个表格：
+                <table border="1">
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>D</td>
+                </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>这个单元格内包含一个无序列表：
+                <ul>
+                    <li>000</li>
+                    <li>000</li>
+                    <li>000</li>
+                </ul>
+            </td>
+            <td>这个单元格内包含一个有序列表：
+                <ol>
+                    <li>000</li>
+                    <li>000</li>
+                    <li>000</li>
+                </ol>
+            </td>
+        </tr>
+    </table><br><br>
+
+    单元格边距示例<br>
+    无单元格边距：
+    <table border="1">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>   
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table><br>
+    有单元格边距：
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>   
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table><br><br>
+
+    单元格间距示例：<br>
+    默认单元格间距：
+    <table>
+        <table border="1">
+            <tr>
+              <td>First</td>
+              <td>Row</td>
+            </tr>
+            <tr>
+              <td>Second</td>
+              <td>Row</td>
+            </tr>
+    </table><br>
+            
+    单元格间距为0:
+    <table border="1" cellspacing="0">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table><br>
+            
+    单元格间距为10:
+    <table border="1" cellspacing="10">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table><br><br>
+
+</body>
+
+
+</html>

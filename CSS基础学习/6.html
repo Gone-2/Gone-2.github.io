@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS字体</title>
+<style>
+    p.serid{font-family: 'Times New Roman', Times, serif;}
+    p.sansserif{font-family: Arial, Helvetica, sans-serif;}<!--若是用户电脑没有字体1，则会显示字体2，若12都没有，则会显示字体3-->
+    p.normal {font-style:normal;}
+    p.italic {font-style:italic;}
+    p.oblique {font-style:oblique;}
+    h1 {font-size:50px;}
+    h2 {font-size:10px;}
+    p.normal {font-weight:normal;}
+    p.light {font-weight:lighter;}
+    p.thick {font-weight:bold;}
+    p.thicker{font-weight: 900;}
+    p.normal {font-variant:normal;}
+    p.small{font-variant:small-caps;}
+
+    p.ex1{font:15px arial,sans-serif;}
+    p.ex2{font:italic bold 12px/30px Georgia,serif;}
+</style>
+</head>
+
+<body>
+    <p class="serid">Times New Roman字体</p>
+    <p class="sansserif">Arial字体</p>
+    <p class="normal">这是正常</p>
+    <p class="italic">这是斜体字</p>
+    <p class="oblique">这是倾斜的文字</p>
+    <h1>大字体</h1><!--在所有浏览器的解决方案中，设置<body>元素的默认字体大小的是百分比-->
+    <h2>小字体</h2><!--将px换成em可达到同样效果，1em在浏览器中默认的文字大小是16px，如果使用em单位，则可以在所有浏览器中调整文本大小-->
+    <p class="normal">正常字体</p>
+    <p class="light">更细</p>
+    <p class="thick">加粗</p>
+    <p class="thicker">900px</p>
+    <p class="normal">The default standard font</p>
+    <p class="small">Small capital letter</p>
+    <p class="ex1">使用简写属性将字体属性设置在一个声明之内</p>
+    <p class="ex2">使用简写属性将字体属性设置在一个声明之内</p>
+</body>
+</html>

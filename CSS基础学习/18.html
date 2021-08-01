@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Position(定位)</title>
+<style>
+    div.static{
+        position: static;
+        border:3px solid #73ad21;
+    }
+    div.ex1 {
+        background-color: lightblue;
+        width: 110px;
+        height: 110px;
+        overflow: scroll;
+    }
+    p.pos_fixed{
+        position: fixed;
+        top:100px;
+        right: 50px;
+    }
+    h2.pos_top{
+        position: relative;
+        top: -30px;
+    }
+    h2.pos_left{
+        position: relative;
+        left: -20px;
+    }
+    h2.pos_right{
+        position: relative;
+        left: 20px;
+    }
+    h2.pos_absolute{
+        position: absolute;
+        left: 500px;
+        top: 500px;
+    }
+    h2.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        background-color: #cae8ca;
+        border: 2px solid #4CAF50;
+    }
+    img{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+    }
+</style>
+</head>
+
+<body>
+    <h2 class="sticky">粘性定位</h2><!--sticky定位-->
+    <div class="static">该元素使用了position:static，HTML元素的默认值，即没有定位，遵循正常的文档流对象</div><!--static定位-->
+    <p class="pos_fixed">IE7和IE8支持只有一个!DOCTYPE指定固定值</p><!--fixed定位-->
+    <h2>正常标题</h2>
+    <h2 class="pos_top">标题向上移动30px</h2>
+    <h2 class="pos_left">标题向左移动20px</h2>
+    <h2 class="pos_right">标题向右移动20px</h2><!--relative定位-->
+    <h2 class="pos_absolute">绝对定位的标题</h2><!--absolute定位-->
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgss0.baidu.com%2F-4o3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F060828381f30e924f40761e94b086e061c95f743.jpg&refer=http%3A%2F%2Fgss0.baidu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629355318&t=d3a52ecdec5b65aeabaedebd3b8603ec"><!--z-index属性可指定元素的堆叠顺序-->
+    <div class="ex1">如果元素中的内容超出了给定的宽度和高度属性，overflow 属性可以确定是否显示滚动条等行为</div>
+    <p>更改光标示例：</p>
+    <span style="cursor:auto">auto</span><br>
+    <span style="cursor:crosshair">crosshair</span><br>
+    <span style="cursor:default">default</span><br>
+    <span style="cursor:e-resize">e-resize</span><br>
+    <span style="cursor:help">help</span><br>
+    <span style="cursor:move">move</span><br>
+    <span style="cursor:n-resize">n-resize</span><br>
+    <span style="cursor:ne-resize">ne-resize</span><br>
+    <span style="cursor:nw-resize">nw-resize</span><br>
+    <span style="cursor:pointer">pointer</span><br>
+    <span style="cursor:progress">progress</span><br>
+    <span style="cursor:s-resize">s-resize</span><br>
+    <span style="cursor:se-resize">se-resize</span><br>
+    <span style="cursor:sw-resize">sw-resize</span><br>
+    <span style="cursor:text">text</span><br>
+    <span style="cursor:w-resize">w-resize</span><br>
+    <span style="cursor:wait">wait</span><br>
+</body>
+</html>

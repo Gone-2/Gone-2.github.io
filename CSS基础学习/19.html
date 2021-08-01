@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS布局-Overflow</title>
+<style>
+    #overflowTest {
+        background: #4CAF50;
+        color: white;
+        padding: 15px;
+        width: 80%;
+        height: 100px;
+        overflow: scroll;
+        border: 1px solid #ccc;
+    }
+</style>
+</head>
+
+<body>
+    CSS overflow 属性可以控制内容溢出元素框时在对应的元素区间内添加滚动条
+    <p>overflow属性有以下值：</p>
+    <div id="overflowTest">
+        <p>visible:默认值。内容不会被修剪，会呈现在元素框之外</p>
+        <p>hidden:内容会被修剪，并且其余内容是不可见的</p>
+        <p>scroll:内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容</p>
+        <p>auto:如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容</p>
+        <p>inherit:规定应该从父元素继承 overflow 属性的值</p>
+    </div>
+</body>
+</html>

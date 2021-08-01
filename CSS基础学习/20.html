@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Float(浮动)</title>
+<style>
+    div{
+        float: right;
+        width: 150px;
+        border: 1px solid black;/*为图片添加黑色实线边框*/
+        margin: 5px 5px 15px 20px;/*为图片添加边距，顶部与右侧为5px，底部为15px，左侧为20px*/
+        padding:15px;
+        text-align: center;
+    }
+    .thumbnail {
+        float:left;
+        width:110px;
+        height:110px;
+        margin:3px;
+    }
+    .text_line{
+        clear: both;
+        margin-bottom: 2px;
+    }
+    span{
+        float:left;
+	    width:1.2em;
+	    font-size:400%;
+	    font-family:algerian,courier;
+	    line-height:80%;
+    }
+</style>
+</head>
+
+<body>
+    标题和图片浮动在段落的右边：<br>
+    <div>
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F2fdbeff847a99bb584018bb4642621750d033ffb356d4-OFbkt5_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629357321&t=7d0d6c8ae3a5f59d6f8eab28bd63f83c" width="150px" height="150px">
+    WLOP
+    </div>
+    <p>
+    <span>这</span>是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。       
+    </p><!--让段落的第一个字母浮动到左侧-->
+    <h2 class="text_line"> 彼此相邻的浮动元素：</h2>    <!--元素浮动之后，周围的元素会重新排列，为了避免这种情况，可使用clear属性指定元素两侧不能出现浮动元素-->
+    <img class="thumbnail" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs1.jiligame.com%2Fimages%2F2019%2F2019%2F11%2F18919586a0a08c6253d3538e99d2f41c.jpg&refer=http%3A%2F%2Fs1.jiligame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629358073&t=345fa2f9609e067884ec9ba993ab3e53" >
+    <img class="thumbnail" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs1.jiligame.com%2Fimages%2F2019%2F2019%2F11%2F18919586a0a08c6253d3538e99d2f41c.jpg&refer=http%3A%2F%2Fs1.jiligame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629358073&t=345fa2f9609e067884ec9ba993ab3e53" >
+    <img class="thumbnail" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs1.jiligame.com%2Fimages%2F2019%2F2019%2F11%2F18919586a0a08c6253d3538e99d2f41c.jpg&refer=http%3A%2F%2Fs1.jiligame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629358073&t=345fa2f9609e067884ec9ba993ab3e53" >
+    <img class="thumbnail" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs1.jiligame.com%2Fimages%2F2019%2F2019%2F11%2F18919586a0a08c6253d3538e99d2f41c.jpg&refer=http%3A%2F%2Fs1.jiligame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629358073&t=345fa2f9609e067884ec9ba993ab3e53" >
+    <img class="thumbnail" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs1.jiligame.com%2Fimages%2F2019%2F2019%2F11%2F18919586a0a08c6253d3538e99d2f41c.jpg&refer=http%3A%2F%2Fs1.jiligame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629358073&t=345fa2f9609e067884ec9ba993ab3e53" >
+    <img class="thumbnail" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs1.jiligame.com%2Fimages%2F2019%2F2019%2F11%2F18919586a0a08c6253d3538e99d2f41c.jpg&refer=http%3A%2F%2Fs1.jiligame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629358073&t=345fa2f9609e067884ec9ba993ab3e53" >
+    <img class="thumbnail" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs1.jiligame.com%2Fimages%2F2019%2F2019%2F11%2F18919586a0a08c6253d3538e99d2f41c.jpg&refer=http%3A%2F%2Fs1.jiligame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629358073&t=345fa2f9609e067884ec9ba993ab3e53" >
+    <img class="thumbnail" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs1.jiligame.com%2Fimages%2F2019%2F2019%2F11%2F18919586a0a08c6253d3538e99d2f41c.jpg&refer=http%3A%2F%2Fs1.jiligame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1629358073&t=345fa2f9609e067884ec9ba993ab3e53" >
+</body>
+</html>
