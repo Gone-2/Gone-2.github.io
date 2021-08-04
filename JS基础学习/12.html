@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS定义函数</title>
+</head>
+<body>
+    <h2>通过function关键词定义</h2>
+    <p>通过function进行定义，其后是函数名和括号()</p>
+    <p>需要执行的代码放置在花括号中{}</p>
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+    <p>在 JavaScript 函数中声明的变量，会成为函数的局部变量。
+        局部变量只能在函数内访问</p>
+    <script>
+        myFunction();
+
+        function myFunction(){
+            var carname = "volvo";
+            document.getElementById("demo1").innerHTML = typeof carname + "" + carname;
+        }
+
+        document.getElementById("demo2").innerHTML = typeof carname;
+    </script>
+</body>
+</html>

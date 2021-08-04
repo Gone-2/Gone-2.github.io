@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换字符串</title>
+</head>
+<body>
+    <h3>转换大小写</h3>
+    <p>转换为大写：<button onclick="big()">大写转换</button><span id="demo">Hello world!</span></p>
+    <p>转换为小写：<button onclick="small()">小写转换</button><span id="demo1">Hello world!</span></p>
+
+    <h3>concat() 连接多个字符串</h3>
+    <p id="demo3"></p>
+
+    <h3>trim()删除字符串两端的空白符</h3>
+    <button onclick="blank()">点击输出已删除空白字符的字符串</button>
+
+    <script>
+        function big(){
+            var text = document.getElementById("demo").innerHTML;
+            document.getElementById("demo").innerHTML = text.toUpperCase();
+        }
+        function small() {
+            var text = document.getElementById("demo1").innerHTML;
+            document.getElementById("demo1").innerHTML = text.toLowerCase();
+        }
+        var text1 = "Hello";
+        var text2 = "World!";
+        var text3 = text1.concat(" ",text2);
+        function blank() {
+            var str = "     Hello World!     ";
+            alert(str.trim());
+        }
+        document.getElementById("demo3").innerHTML = text3;
+    </script>
+</body>
+</html>
