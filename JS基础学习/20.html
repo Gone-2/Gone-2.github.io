@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学</title>
+</head>
+<body>
+    <h3>Math.round(x) 返回 x 四舍五入到最接近的整数的值：</h3>
+    <p id="demo1"></p>
+
+    <h3>Math.pow(x,y) 返回 x 的 y 次幂的值：</h3>
+    <p id="demo2"></p>
+
+    <h3>Math.sqrt(x) 返回 x 的平方根：</h3>
+    <p id="demo3"></p>
+
+    <h3>Math.abs(x) 返回 x 的绝对值：</h3>
+    <p id="demo4"></p>
+
+    <h3>Math.ceil() 把数字上舍入为最接近的整数：</h3>
+    <p id="demo5"></p>
+
+    <h3>Math.floor(x) 返回 x 被下舍入为最接近整数的值：</h3>
+    <p id="demo6"></p>
+
+    <h3>Math.min() 和 Math.max() 查找参数列表中的最低或最高值：</h3>
+    <p>最高值：<span id="demo7"></span></p>
+    <p>最低值：<span id="demo8"></span></p>
+    <script>
+        document.getElementById("demo1").innerHTML = Math.round(6.4);
+        document.getElementById("demo2").innerHTML = Math.pow(5,5);
+        document.getElementById("demo3").innerHTML = Math.sqrt(25);
+        document.getElementById("demo4").innerHTML = Math.abs(-7.2);
+        document.getElementById("demo5").innerHTML = Math.ceil(3.2);
+        document.getElementById("demo6").innerHTML = Math.floor(3.8);
+
+        document.getElementById("demo7").innerHTML =Math.max(0, 150, 30, 20, -8, -200);
+        document.getElementById("demo8").innerHTML =Math.min(0, 150, 30, 20, -8, -200);
+    </script>
+</body>
+</html>

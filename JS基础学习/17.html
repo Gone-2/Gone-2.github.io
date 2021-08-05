@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十六进制转换</title>
+</head>
+<body>
+    <p>前缀为0x的数值会被JavaScript解释为十六进制<br>
+        前缀为0的数值会被JavaScript解释为八进制</p>
+    <p>toString可将数输出为十六进制、八进制或二进制</p>
+
+    <p id="demo"></p>
+    
+    <script>
+        var conversion =32;
+        document.getElementById("demo").innerHTML =
+        "32 = " + "<br>" + 
+        " 十进制 " + conversion.toString(10) + "<br>" +
+        " 十六进制 " + conversion.toString(16) + "<br>" +
+        " 八进制 " + conversion.toString(8) + "<br>" +
+        " 二进制 " + conversion.toString(2);    </script>
+</body>
+</html>
