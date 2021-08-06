@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>条件</title>
+</head>
+<body>
+    <h2>if...else语句及else if语句</h2>
+    <p>单击按钮以显示基于时间的问候语：</p>
+    <button onclick="mytime()">试一试</button>
+    <p id="demo"></p>
+
+    <script>
+        function mytime(){
+            var greeting;
+            var time = new Date().getHours();
+            if (time >= 19){
+                greeting = "晚安";
+            } else if (time >= 11){
+                greeting = "午安";
+            } else {
+                greeting = "早安";
+            }
+            document.getElementById("demo").innerHTML = greeting;
+        }
+    </script>
+</body>
+</html>

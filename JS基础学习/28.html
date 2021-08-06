@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break和continue</title>
+</head>
+<body>
+    <h3>break用于跳出循环</h3>
+    <p id="demo"></p>
+
+    <h3>continue跳过这次循环，进入下一次循环</h3>
+    <p id="demo1"></p>
+
+    <script>
+        var text = "";
+        var i;
+        for (i = 0; i < 10; i++) {
+        if (i === 3) { break; }
+        text += "数字是 " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+        text = "";
+        for (i = 0; i < 10; i++) {
+        if (i === 3) { continue; }
+        text += "数字是 " + i + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text
+    </script>
+</body>
+</html>

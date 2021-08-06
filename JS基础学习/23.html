@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑运算符</title>
+</head>
+<body>
+    <h2>逻辑运算符</h2>
+    <p>&&:与，两边的值均为真则返回true，反之返回false</p>
+    <p>||:或，两边的值有一项为真时则返回true，否则返回false</p>
+    <p>!:非，与真值一起时为false，与假值一起时为true</p>
+    <br>
+    <h2>条件(三元)运算符</h2>
+    <p>输入年龄然后点击试一试：</p>
+    <input id="age">
+    <button onclick="conditions()">试一试</button>
+    <p id="demo"></p>
+    <script>
+        function conditions(){
+            var age,show;
+            age = document.getElementById("age").value;
+            show = (age<18)?"未成年":"已成年";
+            document.getElementById("demo").innerHTML = show;
+        }
+    </script>
+</body>
+</html>

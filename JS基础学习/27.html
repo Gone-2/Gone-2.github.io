@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while循环</title>
+</head>
+<body>
+    <h3>语法：
+        while (运行条件) {
+            要执行的代码块
+        }
+    </h3>
+    <p id="demo"></p>
+
+    <h3>先执行一次再判断条件：
+        do{
+            要执行的代码块
+        }while(运行条件)
+    </h3>
+    <p id="demo1"></p>
+    <script>
+        var text = "";
+        var i = 0;
+        while (i < 5) {
+          text += "<br>数字是 " + i;
+          i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+
+        var text1 = ""
+        var x = 0;
+        do {
+        text1 += "<br>数字是 " + x;
+        x++;
+        }
+        while (x< 5);  
+        document.getElementById("demo1").innerHTML = text1;
+    </script>
+</body>
+</html>

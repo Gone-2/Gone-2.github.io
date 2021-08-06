@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑</title>
+</head>
+<body>
+    <h2>布尔值true与false</h2>
+    <h3>Boolean()函数可用于确定表达式或变量是否为真</h3>
+    <p>括号内表达式或变量为真则返回true：</p>
+    <p><button onclick="boolean()">试一试</button></p>
+    <p id="demo"></p>否则返回false
+    
+    <h3>所有真实值即为True</h3>
+    <h3>所有不具有真实值的即为false</h3>
+    <script>
+        function boolean(){
+            document.getElementById("demo").innerHTML = Boolean(10>9)
+        }
+    </script>
+</body>
+</html>
