@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换</title>
+</head>
+<body>
+    <h2>typeof运算符</h2>
+    <h3>typeof不是变量，属于运算符，但typeof始终会返回字符串</h3>
+    <p>
+        NaN 的数据类型是数值;
+        数组的数据类型是对象;
+        日期的数据类型是对象;
+        null 的数据类型是对象;
+        未定义变量的数据类型是 undefined;
+        尚未赋值的变量的数据类型也是 undefined.
+    </p>
+    <p>typeof 运算符返回变量的数据类型：</p>
+    <p id="demo"></p>
+
+    <h2>constructor属性</h2>
+    <h3>返回变量的构造器函数</h3>
+    <p id="demo1"></p>
+    <h3>constructor检查对象是否为数组函数</h3>
+    <p id="demo2"></p>
+
+    <h1>类型转换</h1>
+    <p>string()转换字符串：<span id="demo3"></span></p>
+
+    <p>Number()转换数值：<span id="demo4"></span></p>
+
+    <p>Boolean()转换布尔值：<span id="demo5"></span></p>
+    <script>
+        document.getElementById("demo").innerHTML = 
+        typeof "john" + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof false + "<br>" +
+        typeof new Date() + "<br>" +
+        typeof function () {} + "<br>" +
+        typeof myCar;
+
+        document.getElementById("demo1").innerHTML = 
+        "john".constructor + "<br>" +
+        (3.14).constructor;
+
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo2").innerHTML = isArray(fruits);
+        function isArray(myArray) {
+        return myArray.constructor === Array;
+        }
+
+        document.getElementById("demo3").innerHTML = String(123);
+        document.getElementById("demo4").innerHTML = Number("123");
+        document.getElementById("demo5").innerHTML = (123).toString();
+
+    </script>
+</body>
+</html>

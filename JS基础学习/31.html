@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+</head>
+<body>
+    <p>正则表达式是构成搜索模式（search pattern）的字符序列</p>
+    <p>可用于执行所有类型的文本搜索和文本替换操作</p>
+    <h2>正则表达式方法</h2>
+    <h3>1.test()</h3>
+    <p>搜索字符串，然后根据结果返回 true 或 false</p>
+    <p id="demo">查找段落中的"Sparta"：This is Sparta!</p>
+    <p id="demo1"></p>
+    
+    <h3>2.exec()</h3>
+    <p>通过指定的模式（pattern）搜索字符串，并返回已找到的文本。如果未找到匹配，则返回 null</p>
+    <p id="demo2"></p>
+    <script>
+    text = document.getElementById("demo").innerHTML; 
+    document.getElementById("demo1").innerHTML = /Sparta/.test(text);
+
+    var obj = /life/.exec("The best things in life are free!");
+    document.getElementById("demo2").innerHTML = obj;
+    </script>
+</body>
+</html>

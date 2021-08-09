@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>位运算符</title>
+</head>
+<body>
+    <h3>AND(&)，如果位数都是1，则返回1：</h3>
+    <p id="demo"></p>
+
+    <h3>OR(|)，如果数位之一是1，则返回1：</h3>
+    <p id="demo1"></p>
+
+    <h3>XOR(^)，如果数位是不同的，则返回1：</h3>
+    <p id="demo2"></p>
+
+    <h3>NOT(~)，对数字求负，然后减1：</h3>
+    <p id="demo3"></p>
+
+    <h3>左移(<<)，如果位数都是1，则返回1：</h3>
+    <p id="demo4"></p>
+    
+    <h3>右移(>>)，最左侧的数位被从左侧推入，最右侧的数位被移出：</h3>
+    <p id="demo5"></p>
+
+    <h3>零填充右移(>>>)，一个或多个零数位从左侧被推入，最右侧的数位被移出：</h3>
+    <p id="demo6"></p>
+
+
+    <script>
+        document.getElementById("demo").innerHTML = 5 & 1;
+        document.getElementById("demo1").innerHTML = 5 | 1;
+        document.getElementById("demo2").innerHTML = 5 ^ 1;
+        document.getElementById("demo3").innerHTML = ~ 5;
+        document.getElementById("demo4").innerHTML = 5 << 1;
+        document.getElementById("demo5").innerHTML = 5 >> 1;
+        document.getElementById("demo6").innerHTML = 5 >>> 1;
+    </script>
+</body>
+</html>

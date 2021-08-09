@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript异常</title>
+</head>
+<body>
+    <h3>格式：</h3>
+    <pre><h3>
+        try {
+        供测试的代码块
+        }
+        catch(err) {
+        处理错误的代码块
+        } 
+        throw{
+        自定义的错误消息
+        }
+        finally{
+        无论 try / catch 的结果如何都执行的代码块
+        }
+    </h3></pre>
+    <p>try()和catch(err)需一起使用</p>
+    <h3>error对象属性：</h3>
+        name： 	设置或返回错误名
+    <br>message： 设置或返回错误消息
+    <h3>可返回的值：</h3>
+    <p>EvalError 	已在 eval() 函数中发生的错误<br>
+        RangeError 	已发生超出数字范围的错误<br>
+        ReferenceError 	已发生非法引用<br>
+        SyntaxError 	已发生语法错误<br>
+        TypeError 	已发生类型错误<br>
+        URIError 	在 encodeURI() 中已发生的错误</p>
+</body>
+</html>
