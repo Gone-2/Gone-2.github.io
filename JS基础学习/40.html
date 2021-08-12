@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call()方法</title>
+</head>
+<body>
+    <h3>带参数的call()</h3>
+    <p>用 call() 函数调用 person1 的 fullName 方法，在 person1 上使用它：</p>
+    <p id="demo"></p>
+
+    <script>
+        var person = {
+        fullName: function(city, country) {
+            return this.firstName + " " + this.lastName + "," + city + "," + country;
+        }
+        }
+        var person1 = {
+        firstName:"Bill",
+        lastName: "Gates"
+        }
+        var person2 = {
+        firstName:"Steve",
+        lastName: "Jobs"
+        }
+        var x = person.fullName.call(person1, "Seatle", "USA"); 
+        document.getElementById("demo").innerHTML = x; 
+    </script>
+</body>
+</html>

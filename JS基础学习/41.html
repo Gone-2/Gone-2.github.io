@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply()方法</title>
+</head>
+<body>
+    <h1>带参数的apply()方法</h1>
+    <p>用 apply() 将 person 的 fulllName 方法在 person1 上<b>应用</b>：</p>
+    <p id="demo"></p>
+
+    <h2>Math.max()</h2>
+    <p>找到并返回数字数组中的最大数字：</p>
+    <p id="demo1"></p>
+    <script>
+        var person = {
+        fullName: function(city, country) {
+            return this.firstName + " " + this.lastName + "," + city + "," + country;
+        }
+        }
+        var person1 = {
+        firstName:"Bill",
+        lastName: "Gates"
+        }
+        var x = person.fullName.apply(person1, ["Seatle", "USA"]); 
+        document.getElementById("demo").innerHTML = x; 
+
+        document.getElementById("demo1").innerHTML = Math.max.apply("",[1,2,3,4])
+    </script>
+</body>
+</html>
