@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window.location对象</title>
+</head>
+<body>
+    <h1>window.location</h1>
+    <h3>window.location.href 属性可返回当前页面的 URL</h3>
+    <p id="demo"></p><br><br>
+
+    <h3>window.location.hostname 属性返回 web（当前页面的）主机的域名</h3>
+    <p id="demo1"></p><br><br>
+
+    <h3>window.location.pathname 返回当前页面的路径或文件名</h3>
+    <p id="demo2"></p><br><br>
+
+    <h3>window.location.protocol 返回使用的 web 协议（http: 或 https:）</h3>
+    <p id="demo3"></p><br><br>
+
+    <h3>window.location.port 属性返回（当前页面的）互联网主机端口的编号</h3>
+    <p id="demo4"></p>
+    <p>如果端口号是默认值，则大多数浏览器将显示 0 或不显示</p>
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "本页面的完整 URL 是：<br>" + window.location.href;
+
+        document.getElementById("demo1").innerHTML = 
+        "页面主机名是：" + window.location.hostname;
+
+        document.getElementById("demo2").innerHTML =
+        "页面路径是：" + window.location.pathname;
+
+        document.getElementById("demo3").innerHTML = 
+        "页面协议是 " + window.location.protocol;
+
+        document.getElementById("demo4").innerHTML = 
+        "当前页面的 URL 端口号是：" + window.location.port;
+    </script>
+
+</body>
+</html>
