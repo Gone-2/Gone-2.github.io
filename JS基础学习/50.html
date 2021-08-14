@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+    <script>
+        function setCookie(cname,cvalue,exdays) { //cookie的名字（cname）,cookie的值（cvalue）,cookie过期的天数（exdays）
+          var d = new Date();
+          d.setTime(d.getTime() + (exdays*24*60*60*1000));
+          var expires = "expires=" + d.toGMTString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        } //创建一个函数，将访问者的名字存储在cookie变量中
+        
+        function getCookie(cname) {
+          var name = cname + "=";
+          var decodedCookie = decodeURIComponent(document.cookie);
+          var ca = decodedCookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        } //创建一个函数返回指定 cookie 的值
+        
+        function checkCookie() {
+          var user=getCookie("username");
+          if (user != "") {
+            alert("再次欢迎您，" + user);
+          } else {
+             user = prompt("请输入姓名：","");
+             if (user != "" && user != null) {
+               setCookie("username", user, 30);
+             }
+          }//如果已设置 cookie，将显示一个问候。如果未设置 cookie，会显示一个提示框，询问用户的名字，并存储用户名 cookie 30天，通过调用 setCookie 函数
+        } //创建检查 cookie 是否设置的函数
+    </script>
+</head>
+<body>
+    <p>Cookie 是在您的计算机上存储在小的文本文件中的数据</p>
+    <body onload="checkCookie()"></body>
+</body>
+</html>

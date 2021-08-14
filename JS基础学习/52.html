@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX-服务器响应</title>
+</head>
+<body>
+    <p>readyState 属性存留 XMLHttpRequest 的状态,当 readyState 发生变化时就会调用 onreadystatechange 函数<br>
+        onreadystatechange 属性定义当 readyState 发生变化时执行的函数<br>
+        status 属性和 statusText 属性存有 XMLHttpRequest 对象的状态
+    </p>
+    <h2>服务器响应属性</h2>
+    <h3>responseText ：获取字符串形式的响应数据</h3>
+    <h3>responseXML ：获取 XML 数据形式的响应数据</h3>
+    <h3>getResponseHeader() ：从服务器返回特定的头部信息</h3>
+    <h3>getAllResponseHeaders() ：从服务器返回所有头部信息</h3>
+    <p><b>示例：</b></p><span id="demo"></span>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("demo").innerHTML =
+    this.getAllResponseHeaders();
+  }
+};
+xhttp.open("GET", "https://gone-2.github.io/CSS基础学习/1.html", true);
+xhttp.send();
+</script>
+</body>
+</html>

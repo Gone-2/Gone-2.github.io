@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX-向服务器发送请求</title>
+</head>
+<body>
+
+    <h2>向服务器发送请求，需使用 XMLHttpRequest 对象的open()和send()方法</h2>
+    <p>xhttp.open("请求的类型GET还是POST", "服务器（文件）位置", true（异步）或false（同步）)<br>
+        向服务器发送请求（用于 GET）：xhttp.send()<br>
+        向服务器发送请求（用于 POST）：xhttp.send(string)<br>
+    </p>
+    <p>GET 比 POST 更简单更快，可用于大多数情况下<br>
+        不过，请在以下情况始终使用 POST：<br>
+            缓存文件不是选项（更新服务器上的文件或数据库）<br>
+            向服务器发送大量数据（POST 无大小限制）<br>
+            发送用户输入（可包含未知字符），POST 比 GET 更强大更安全<br>
+    </p>
+    <h2>XMLHttpRequest 对象用于同服务器交换数据</h2>
+    <h3>使用GET向服务器发送请求:</h3>
+    <button type="button" onclick="loadDoc()">请求数据</button>
+    <p id="demo"></p>
+    
+    <script>
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "https://gone-2.github.io/JS基础学习/1.html", true);
+      xhttp.send();
+    }
+    </script>
+</body>
+</html>
